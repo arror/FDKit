@@ -30,7 +30,7 @@ jobs:
                CC=gcc \
                CFLAGS="-arch x86_64 -mmacosx-version-min=12.0" \
                LFLAGS="-arch x86_64 -mmacosx-version-min=12.0 -Wl,-Bsymbolic-functions" static
-          cp bin libfd.a ../macos_arm64_x86_64/macos_x86_64/libfd.a
+          cp bin/libfd.a ../macos_arm64_x86_64/macos_x86_64/libfd.a
           
           make clean
           make clean
@@ -38,7 +38,7 @@ jobs:
                CC=gcc \
                CFLAGS="-arch arm64 -mmacosx-version-min=12.0" \
                LFLAGS="-arch arm64 -mmacosx-version-min=12.0 -Wl,-Bsymbolic-functions" static
-          cp bin libfd.a ../macos_arm64_x86_64/macos_arm64/libfd.a
+          cp bin/libfd.a ../macos_arm64_x86_64/macos_arm64/libfd.a
 
           cd ../macos_arm64_x86_64
           lipo -create -o ./libfd.a ./macos_arm64/libfd.a ./macos_x86_64/libfd.a
