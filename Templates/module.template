@@ -1,0 +1,4 @@
+module FDKit {
+    umbrella header "fd.h"
+    export *
+}
