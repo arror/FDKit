@@ -1,0 +1,17 @@
+// swift-tools-version: 5.7
+import PackageDescription
+
+let package = Package(
+  name: "FDKit",
+  platforms: [.macOS(.v12)],
+  products: [
+    .library(name: "FDKit", targets: ["FDKit"])
+  ],
+  targets: [
+    .binaryTarget(
+      name: "FDKit",
+      url: "https://github.com/arror/FDKit/releases/download/VERSION/FDKit.xcframework.zip",
+      checksum: "CHECKSUM"
+    )
+  ]
+)
